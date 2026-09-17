@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Configuration de la page (Mode large pour un beau rendu)
+# Configuration de la page
 st.set_page_config(
     page_title="Calculateur de Thème Numérologique - MR Coaching",
     page_icon="✨",
@@ -94,3 +94,13 @@ if submit_button:
                 st.error("⚠️ Erreur : Le format de la date de naissance n'est pas valide (utiliser le format JJ/MM/AAAA).")
         else:
             st.error("⚠️ Erreur : Le format de la date de naissance n'est pas valide (utiliser le format JJ/MM/AAAA).")
+
+# --- PIED DE PAGE SIGNÉ ---
+st.markdown("<br><br>", unsafe_allow_html=True)
+st.markdown("---")
+st.markdown(
+    "<div style='text-align: center; color: #718096; font-size: 0.9em;'>"
+    "Outil développé sur mesure par <b>MR Coaching</b>"
+    "</div>", 
+    unsafe_allow_html=True
+)

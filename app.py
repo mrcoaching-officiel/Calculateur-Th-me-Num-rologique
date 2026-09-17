@@ -7,6 +7,45 @@ st.set_page_config(
     layout="centered"
 )
 
+# --- APPLICATION DU DESIGN PERSONNALISÉ (COULEURS MR COACHING) ---
+st.markdown("""
+    <style>
+    /* Fond global de l'application */
+    .stApp {
+        background-color: #1F2D37;
+    }
+    
+    /* Tous les grands titres (h1, h2, h3) en couleur C5B285 */
+    h1, h2, h3 {
+        color: #C5B285 !important;
+    }
+    
+    /* Tous les textes normaux, labels et paragraphes en blanc */
+    p, label, .streamlit-expanderHeader, span {
+        color: #FFFFFF !important;
+    }
+    
+    /* Style des champs de saisie pour qu'ils s'intègrent bien */
+    .stTextInput input {
+        background-color: #2b3e4c !important;
+        color: #FFFFFF !important;
+        border: 1px solid #C5B285 !important;
+    }
+    
+    /* Bouton de validation aux couleurs de la marque */
+    .stButton>button {
+        background-color: #C5B285 !important;
+        color: #1F2D37 !important;
+        font-weight: bold;
+        border: none;
+    }
+    .stButton>button:hover {
+        background-color: #d6c398 !important;
+        color: #1F2D37 !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 # Fonctions de calcul numérologique
 def reduire(nombre):
     while nombre > 9 and nombre not in [11, 22, 33]:
@@ -77,7 +116,7 @@ if submit_button:
                 somme_mp = annee_perso + mois_actuel
                 mois_perso = reduire(somme_mp)
                 
-                # --- AFFICHAGE DES RÉSULTATS EN BLOCS DESIGN ---
+                # --- AFFICHAGE DES RÉSULTATS ---
                 st.success("🎯 Thème calculé avec succès !")
                 
                 col1, col2 = st.columns(2)
@@ -99,7 +138,7 @@ if submit_button:
 st.markdown("<br><br>", unsafe_allow_html=True)
 st.markdown("---")
 st.markdown(
-    "<div style='text-align: center; color: #718096; font-size: 0.9em;'>"
+    "<div style='text-align: center; color: #C5B285; font-size: 0.9em;'>"
     "Outil développé sur mesure par <b>MR Coaching</b>"
     "</div>", 
     unsafe_allow_html=True

@@ -3,8 +3,9 @@ import streamlit as st
 # Configuration de la page
 st.set_page_config(
     page_title="Calculateur de Thème Numérologique - MR Coaching",
-    page_icon="✨",
+    page_icon="🎯",
     layout="centered"
+)
 )
 
 # --- APPLICATION DU DESIGN PERSONNALISÉ (COULEURS MR COACHING) ---

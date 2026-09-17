@@ -3,9 +3,7 @@ import streamlit as st
 # Configuration de la page
 st.set_page_config(
     page_title="Calculateur de Thème Numérologique - MR Coaching",
-    page_icon="🎯",
     layout="centered"
-)
 )
 
 # --- APPLICATION DU DESIGN PERSONNALISÉ (COULEURS MR COACHING) ---
@@ -74,7 +72,7 @@ def calculer_nom(texte):
     return somme, reduire(somme)
 
 # --- INTERFACE STREAMLIT ---
-st.title("✨ Calculateur de Thème Numérologique ✨")
+st.title("Calculateur de Thème Numérologique")
 st.markdown("Remplis les informations ci-dessous pour découvrir ton thème numérologique personnalisé.")
 
 with st.form("formulaire_theme"):
@@ -118,7 +116,7 @@ if submit_button:
                 mois_perso = reduire(somme_mp)
                 
                 # --- AFFICHAGE DES RÉSULTATS ---
-                st.success("🎯 Thème calculé avec succès !")
+                st.success("Thème calculé avec succès !")
                 
                 col1, col2 = st.columns(2)
                 with col1:
@@ -131,9 +129,9 @@ if submit_button:
                     st.metric(label="Mois Personnel (Septembre)", value=mois_perso)
                     
             except ValueError:
-                st.error("⚠️ Erreur : Le format de la date de naissance n'est pas valide (utiliser le format JJ/MM/AAAA).")
+                st.error("Erreur : Le format de la date de naissance n'est pas valide (utiliser le format JJ/MM/AAAA).")
         else:
-            st.error("⚠️ Erreur : Le format de la date de naissance n'est pas valide (utiliser le format JJ/MM/AAAA).")
+            st.error("Erreur : Le format de la date de naissance n'est pas valide (utiliser le format JJ/MM/AAAA).")
 
 # --- PIED DE PAGE SIGNÉ ---
 st.markdown("<br><br>", unsafe_allow_html=True)
